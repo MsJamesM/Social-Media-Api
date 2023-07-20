@@ -2,7 +2,8 @@ const { Schema, Types } = require("mongoose");
 
 const reactionSchema = new Schema({
   reactionId: {
-    /* Use Mongoose's ObjectId data type. Default value is set to a new ObjectId */
+    type: mongoose.Types.ObjectId,
+    default: new mongoose.Types.ObjectId(),
   },
   reactionBody: {
     type: String,
@@ -16,7 +17,7 @@ const reactionSchema = new Schema({
   createdAt: {
     type: Date,
     default: Date.now,
-    /* Set default value to the current timestamp. Use a getter method to format the timestamp on query */
+    get: (timestamp) => new Date(timestamp).toLocaleDateString("en-US"),
   },
 });
 

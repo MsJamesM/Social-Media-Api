@@ -12,13 +12,15 @@ const userSchema = new Schema(
       type: String,
       required: true,
       unique: true,
-      /* Must match a valid email address (look into Mongoose's matching validation */
+      match: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
     },
     thoughts: {
-      /* Array of `_id` values referencing the `Thought` model */
+      type: Schema.Types.ObjectId,
+      ref: "Thought",
     },
     friends: {
-      /* Array of `_id` values referencing the `User` model (self-reference) */
+      type: Schema.Types.ObjectId,
+      ref: "User",
     },
   },
   {
