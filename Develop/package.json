@@ -1,0 +1,16 @@
+{
+  "name": "Social-Media-API",
+  "version": "1.0.0",
+  "description": "An API for a social network web application",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index",
+    "seed": "node utils/seed",
+    "heroku-postbuild": "node utils/seed.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^7.0.2"
+  }
+}
