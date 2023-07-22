@@ -18,9 +18,7 @@ const thoughtSchema = new Schema(
       type: String,
       required: true,
     },
-    reactions: {
-      reactions: [reactionSchema],
-    },
+    reactions: [reactionSchema],
   },
   {
     toJSON: {
@@ -30,6 +28,6 @@ const thoughtSchema = new Schema(
   }
 );
 
-const Thought = model("thought", thoughtSchema);
+const Thought = model("Thought", thoughtSchema);
 
 module.exports = Thought;
