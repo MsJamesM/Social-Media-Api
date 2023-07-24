@@ -24,9 +24,9 @@ Now open MongoDB Compass or Insomnia to modify the social media API's database. 
 
 [(Full video)](https://vimeo.com/848152377)
 
-![PNG](./visuals/Screenshot.png)
+![PNG](./Visuals/Screenshot.png)
 
-![Gif](./visuals/Walkthrough-gif.gif)
+![Gif](./Visuals/Walkthrough-gif.gif)
 
 ## Credits
 
